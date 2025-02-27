@@ -37,7 +37,7 @@ FairShare is a web application designed to help users manage group expenses effi
 ### Frontend Setup
 ```sh
 # Clone the repository
-git clone https://github.com/yourusername/fairshare.git
+git clone https://github.com/AadityaMohan-dev/FairShare.git
 cd fairshare/frontend
 
 # Install dependencies
@@ -57,17 +57,9 @@ cd fairshare/backend
 
 ## 📜 API Documentation
 
-Use **Postman** to test API endpoints. Detailed API documentation will be available soon.
+Use **Swagger** to test API endpoints. 
 
-## 📌 Contributing
 
-Contributions are welcome! If you'd like to improve FairShare, feel free to fork the repo and submit a pull request.
 
-## 📃 License
-
-MIT License. See `LICENSE` for details.
-
----
-
-Developed with ❤️ using React and Spring Boot
+Developed with ❤️ using React and Spring Boot by Aaditya Mohan.
 
