@@ -1,7 +1,8 @@
 package com.FairShare.controller;
 
 
-import com.FairShare.entity.User;
+import com.FairShare.dto.UserRequest;
+import com.FairShare.dto.UserResponse;
 import com.FairShare.svc.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -21,29 +22,29 @@ public class UserController {
 
     @PostMapping
     @Operation(summary = "Create a new user", description = "Creates a new user with the provided details")
-    public ResponseEntity<User> createUser(@RequestBody User user) {
-        User createdUser = userService.createUser(user);
+    public ResponseEntity<UserResponse> createUser(@RequestBody UserRequest user) {
+        UserResponse createdUser = userService.createUser(user);
         return ResponseEntity.ok(createdUser);
     }
 
     @GetMapping("/{id}")
     @Operation(summary = "Get user by ID", description = "Retrieves a user by their ID")
-    public ResponseEntity<User> getUserById(@PathVariable Long id) {
-        User user = userService.getUserById(id);
+    public ResponseEntity<UserResponse> getUserById(@PathVariable Long id) {
+        UserResponse user = userService.getUserById(id);
         return ResponseEntity.ok(user);
     }
 
     @GetMapping
     @Operation(summary = "Get all users", description = "Retrieves a list of all users")
-    public ResponseEntity<List<User>> getAllUsers() {
-        List<User> users = userService.getAllUsers();
+    public ResponseEntity<List<UserResponse>> getAllUsers() {
+        List<UserResponse> users = userService.getAllUsers();
         return ResponseEntity.ok(users);
     }
 
     @PutMapping("/{id}")
     @Operation(summary = "Update user", description = "Updates an existing user with the provided details")
-    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user) {
-        User updatedUser = userService.updateUser(id, user);
+    public ResponseEntity<UserResponse> updateUser(@PathVariable Long id, @RequestBody UserRequest user) {
+        UserResponse updatedUser = userService.updateUser(id, user);
         return ResponseEntity.ok(updatedUser);
     }
 
